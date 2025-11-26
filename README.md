@@ -1,4 +1,4 @@
-# DJI 航线生成器 (DJI Waypoint KMZ Generator)
+# DJI 航线生成器 (DJI Waypoint KMZ Generator)（100Star 后开源）
 
 一个基于 Vue 3 + CesiumJS 的 DJI 无人机航线规划工具，支持生成符合 WPML 1.0.6 标准的 KMZ 航线文件，可直接导入大疆司空 2 (DJI FlightHub 2) 和 Matrice 系列无人机。
 
