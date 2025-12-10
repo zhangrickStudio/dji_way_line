@@ -22,6 +22,13 @@ A DJI drone waypoint planning tool based on Vue 3 + CesiumJS, supporting the gen
 - Right: 3D Map View (Route Preview)
 - Bottom: Coordinate Information
 
+### Create Mission
+![Create Mission](doc/images/create_mission.png)
+- Currently supported route types: Patrol Route, Area Route (More types in development)
+- Select aircraft model (Matrice 3/4 series)
+- Select payload (Matrice 4E/4T)
+- Custom mission name
+
 ### Feature Showcase
 
 #### 1. Height Mode Visualization
@@ -54,11 +61,14 @@ Each height mode has a corresponding schematic:
 
 ### 🗺️ Route Planning
 - **Visual Map Editing**: 3D map interface based on AMap + CesiumJS
-- **Click to Add Waypoints**: Add waypoints directly on the map, support drag-and-drop adjustment
+- **Currently Supported Route Types**:
+  - **Patrol Route**: Add waypoints on map, support loop or one-way patrol missions
+  - **Area Route**: Draw area to auto-generate S-shaped scanning paths with AI target recognition support
+  - More route types (Waypoint, Linear, Oblique, Geometry, etc.) are in development
 - **Real-time Preview**: Real-time display of route path, supporting closed loops and one-way routes
 - **Coordinate Transformation**: Automatic conversion between GCJ-02 (AMap) and WGS84 (GPS) coordinate systems
 
-### 🤖 AI Patrol Mode (Matrice 4T)
+### 🤖 Area Route AI Scan (Matrice 4T)
 - **Smart Scan Path Generation**: Automatically generate S-shaped scanning paths
 - **Target Recognition Config**: Support Person, Vehicle, and Boat target types
 - **Adjustable Parameters**:
@@ -125,18 +135,18 @@ Build artifacts will be output to the `dist` directory.
 
 ### 1. Draw Route
 
-#### Normal Waypoint Mode
-1. Click on the map to add waypoints (red dots)
-2. Waypoints will be connected in order (blue line)
-3. View and edit waypoint list in the right panel
-4. Support delete, clear, and reverse waypoint order
+#### Patrol Route
+1. Select "Patrol Route" type
+2. Click on the map to add patrol waypoints
+3. Configure waypoint parameters (speed, height, gimbal angle)
+4. Support loop patrol and one-way patrol
 
-#### AI Patrol Mode
-1. Enable **AI Patrol Settings (Matrice 4T)**
-2. Draw patrol area on the map (at least 3 points)
-3. System automatically generates S-shaped scanning path (red line)
+#### Area Route (AI Scan)
+1. Select "Area Route" type
+2. Draw scan area on the map (at least 3 points)
+3. System automatically generates S-shaped scanning path
 4. Adjust scan parameters (spacing, direction, margin)
-5. Select recognition targets (Person, Vehicle, Boat)
+5. Select AI recognition targets (Person, Vehicle, Boat) - Matrice 4T only
 
 ### 2. Configure Parameters
 
