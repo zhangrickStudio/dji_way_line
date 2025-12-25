@@ -8,8 +8,7 @@
 
 [English](./README_EN.md) | [简体中文](./README.md)
 
-
-> 📢 **开源说明**：本项目将在 **Star 达到 100** 时正式开源！您的 **Star** 是我们开源的动力！ 🚀
+� **仓库地址**：[GitHub](https://github.com/hecongyuan/dji_way_line) | [Gitee](https://gitee.com/hecongyuan/dji_way_line)
 
 ## ⭐ Star 历史
 
